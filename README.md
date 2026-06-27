@@ -17,6 +17,7 @@ Over time, this repository will grow into a miniature AI stack built component b
 * Read and analyze real-world open-source code.
 * Explore the engineering trade-offs behind AI frameworks and runtimes.
 * Develop the skills required to understand and contribute to projects such as PyTorch, ONNX Runtime, llama.cpp, vLLM, and similar systems.
+* Learn how to evaluate, secure, observe, and operate AI systems in production.
 
 ## Learning Philosophy
 
@@ -29,6 +30,8 @@ AI Mastery follows a few core principles:
 * Read real production code continuously.
 * Validate ideas through experiments and benchmarks.
 * Focus on understanding trade-offs rather than memorizing APIs.
+
+The journey covers the entire AI lifecycle, from mathematical foundations and model implementation to runtime engineering, evaluation, safety, security, observability, and production systems.
 
 ## Repository Structure
 
