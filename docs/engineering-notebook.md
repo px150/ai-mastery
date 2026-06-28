@@ -86,6 +86,84 @@ The notebook grows alongside the repository and reflects the gradual development
 - ...
 ```
 
----
+--------------------------------------------------------------------------------------------
 
-*No entries yet.*
+
+## AI Systems Are Ecosystems, Not Models
+
+**Context**
+
+Module 0.1 — AI Ecosystem Map
+
+**Observation**
+
+Modern AI applications are not defined by a single model.
+
+A production AI system is an ecosystem of interacting components responsible for data processing, model training, inference, runtime execution, serving, evaluation, observability, safety, and supporting infrastructure.
+
+The model is only one component within this larger architecture.
+
+**Reasoning**
+
+Understanding individual components without understanding how they interact leads to fragmented knowledge.
+
+A coherent mental model of the complete AI stack provides the context needed to understand why each component exists, how it interacts with the others, and where it fits within the overall system.
+
+This architectural perspective will guide every module throughout AI Mastery.
+
+**Implications**
+
+Every new concept should be studied not only in isolation, but also in relation to the broader AI stack.
+
+As the repository grows, each implemented component should naturally occupy its place within this architecture.
+
+**Related Concepts**
+
+* AI Stack
+* Training
+* Inference
+* Runtime
+* Serving
+* Evaluation
+* Safety
+* Observability
+
+# AI Stack Overview
+
+```text
+                                      DATASETS
+                                          │
+                                          ▼
+                                   PREPROCESSING
+                                          │
+                                          ▼
+                                     TOKENIZER
+                                          │
+                                          ▼
+                                 MODEL REPRESENTATION
+                                          │
+                                          ▼
+                              NEURAL NETWORK / TRANSFORMER
+                                          │
+                  ┌───────────────────────┴────────────────────────┐
+                  │                                                │
+                  ▼                                                ▼
+            TRAINING STACK                                 INFERENCE STACK
+                  │                                                │
+                  ▼                                                ▼
+      AUTOGRAD • LOSS • OPTIMIZER                       AI RUNTIME
+                  │                                                │
+                  ▼                                                ▼
+            TRAINED MODEL                               TOKEN GENERATION
+                                                                   │
+                                                                   ▼
+                                                              SERVING
+                                                                   │
+                                                                   ▼
+                                                    EVALUATION & BENCHMARKS
+                                                                   │
+                                                                   ▼
+                                                OBSERVABILITY • SAFETY • SECURITY
+```
+
+--------------------------------------------------------------------------------------------
