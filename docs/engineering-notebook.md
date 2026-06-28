@@ -88,7 +88,6 @@ The notebook grows alongside the repository and reflects the gradual development
 
 --------------------------------------------------------------------------------------------
 
-
 ## AI Systems Are Ecosystems, Not Models
 
 **Context**
@@ -165,5 +164,39 @@ As the repository grows, each implemented component should naturally occupy its 
                                                                    ▼
                                                 OBSERVABILITY • SAFETY • SECURITY
 ```
+
+--------------------------------------------------------------------------------------------
+
+## A tensor is an abstraction, not a data structure
+
+**Context**
+
+Module 0.5 — Thinking in Tensors
+
+**Observation**
+
+Very different kinds of data—images, videos, embeddings, model weights, activations, and gradients—can all be represented using the same abstraction.
+
+The runtime does not reason about the semantic meaning of the data. It reasons about memory and metadata.
+
+**Reasoning**
+
+A tensor exists to decouple data representation from data meaning.
+
+This allows the same runtime and the same mathematical operators to work across many domains without specialized implementations for each data type.
+
+**Implications**
+
+Most AI infrastructure is built around tensor abstractions rather than domain-specific data structures.
+
+Understanding tensors as an abstraction for structured memory is more valuable than thinking of them as multidimensional arrays.
+
+**Related Concepts**
+
+* Memory Layout
+* Shape
+* Dtype
+* Strides
+* Runtime
 
 --------------------------------------------------------------------------------------------

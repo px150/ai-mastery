@@ -685,7 +685,7 @@ The Capstone is not a new learning phase, but the integration and validation of 
 
 | Phase     | Status         | Started		| Completed		| Last Updated 	|
 | --------- | -------------- | ------------ | ------------- | -------------	|
-| Phase 0   | 🟡 In Progress |				|				|			   	|	
+| Phase 0   | 🟢 Completed    |	2026-06-28  | 2026-06-28    | 2026-06-28    |	
 | Phase 1   | ⚪ Not Started  |				|				|				|	
 | Phase 2   | ⚪ Not Started  |				|				|				|
 | Phase 3   | ⚪ Not Started  |				|				|				|
@@ -702,6 +702,14 @@ The Capstone is not a new learning phase, but the integration and validation of 
 | Phase 13	| ⚪ Not Started  |				|				|				|
 | Phase 14	| ⚪ Not Started  |				|				|				|
 | Phase 15	| ⚪ Not Started  |				|				|				|
+
+---
+
+| Module                            | Status       | Started    | Completed  |
+|-----------------------------------|--------------|------------|------------|
+| 0.1 AI Ecosystem Map              | ✅ Completed | 2026-06-28 | 2026-06-28 |
+| 0.5 Thinking in Tensors           | ✅ Completed | 2026-06-28 | 2026-06-28 |
+| 1.1 Vectors, Matrices and Tensors | ⚪ Not Started | —        | —          |
 
 ---
 
