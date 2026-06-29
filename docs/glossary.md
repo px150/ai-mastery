@@ -127,6 +127,166 @@ Every entry represents knowledge earned through study, implementation, experimen
 Module X.Y — ...
 ```
 
+--------------------------------------------------------------------------------------------
+
+## Scalar
+
+**Definition**
+
+A tensor with rank 0 representing a single numerical value.
+
+**Purpose**
+
+Represents the simplest possible unit of numerical data.
+
+**AI Stack Context**
+
+Scalars commonly appear as constants, individual tensor elements, loss values, and computed metrics.
+
+**Related Concepts**
+
+* Tensor
+* Rank
+* Shape
+
+**Introduced In**
+
+Module 1.1 — Vectors, Matrices and Tensors
+
 ---
 
-*No entries yet.*
+## Vector
+
+**Definition**
+
+A tensor with rank 1 representing an ordered collection of values.
+
+**Purpose**
+
+Represents one-dimensional numerical data.
+
+**AI Stack Context**
+
+Vectors commonly represent feature vectors, embeddings, logits, and model parameters.
+
+**Related Concepts**
+
+* Tensor
+* Matrix
+* Rank
+* Shape
+
+**Introduced In**
+
+Module 1.1 — Vectors, Matrices and Tensors
+
+---
+
+## Matrix
+
+**Definition**
+
+A tensor with rank 2 representing values organized along two independent axes.
+
+**Purpose**
+
+Represents relationships between two dimensions of data.
+
+**AI Stack Context**
+
+Matrices are widely used for linear transformations, attention mechanisms, weight matrices, and matrix multiplication.
+
+**Related Concepts**
+
+* Tensor
+* Vector
+* Rank
+* Shape
+
+**Introduced In**
+
+Module 1.1 — Vectors, Matrices and Tensors
+
+---
+
+## Tensor
+
+**Definition**
+
+A multidimensional numerical object represented by data together with metadata describing how that data should be interpreted.
+
+**Purpose**
+
+Provides a unified abstraction capable of representing many different kinds of numerical data without requiring domain-specific data structures.
+
+**AI Stack Context**
+
+Tensors are the fundamental data abstraction used throughout modern AI frameworks, runtimes, inference engines, and model formats.
+
+**Related Concepts**
+
+* Scalar
+* Vector
+* Matrix
+* Shape
+* Rank
+* Dtype
+* Strides
+
+**Introduced In**
+
+Module 1.1 — Vectors, Matrices and Tensors
+
+---
+
+## Rank
+
+**Definition**
+
+The number of dimensions (axes) of a tensor.
+
+**Purpose**
+
+Describes the structural complexity of a tensor independently of its semantic meaning.
+
+**AI Stack Context**
+
+Rank determines how tensor operations interpret dimensions, indexing, and broadcasting behavior.
+
+**Related Concepts**
+
+* Tensor
+* Shape
+
+**Introduced In**
+
+Module 1.1 — Vectors, Matrices and Tensors
+
+---
+
+## Shape
+
+**Definition**
+
+The ordered tuple specifying the size of each dimension of a tensor.
+
+**Purpose**
+
+Describes the logical organization of tensor data.
+
+**AI Stack Context**
+
+Shape is fundamental to tensor operations, model architectures, memory allocation, and runtime validation.
+
+**Related Concepts**
+
+* Tensor
+* Rank
+* Dtype
+* Strides
+
+**Introduced In**
+
+Module 1.1 — Vectors, Matrices and Tensors
+
+--------------------------------------------------------------------------------------------

@@ -200,3 +200,58 @@ Understanding tensors as an abstraction for structured memory is more valuable t
 * Runtime
 
 --------------------------------------------------------------------------------------------
+
+## Generality Through Metadata
+
+**Context**
+
+Modules 0.5–1.1
+
+---
+
+### Observation
+
+Modern AI frameworks avoid creating specialized abstractions for vectors, matrices, images, embeddings, activations, gradients, and other domain-specific data.
+
+Instead, they expose a single tensor abstraction whose behavior is determined by metadata such as shape, dtype, and strides.
+
+---
+
+### Reasoning
+
+Generality is achieved by moving variability out of the type system and into metadata.
+
+Rather than introducing new data structures for every possible use case, frameworks define one generic abstraction capable of representing many different domains.
+
+The same principle extends beyond tensors.
+
+Operator dispatch, computational graphs, runtimes, execution providers, and model formats all rely on metadata to specialize behavior while preserving a stable abstraction.
+
+---
+
+### Implications
+
+Generic abstractions:
+
+* maximize code reuse;
+* minimize implementation complexity;
+* simplify extensibility;
+* reduce duplication;
+* decouple algorithms from application domains.
+
+This design philosophy is one of the recurring architectural patterns throughout modern AI infrastructure.
+
+---
+
+### Related Concepts
+
+* Tensor
+* Shape
+* Rank
+* Dtype
+* Strides
+* Runtime
+* Dispatch
+* ONNX
+
+--------------------------------------------------------------------------------------------
