@@ -190,7 +190,7 @@ The objective is to progressively construct a coherent mental model of the compl
 
 ---
 
-# Levels of Confidence
+# Learner Confidence
 
 Before every Mastery Assessment, the learner performs a self-assessment.
 
@@ -258,9 +258,60 @@ Well-calibrated confidence is an essential engineering skill.
 
 ---
 
+# Mentor Confidence
+
+After each Mastery Assessment, the mentor independently evaluates the learner's demonstrated understanding.
+
+Unlike Learner Confidence, which reflects perceived understanding before the assessment, Mentor Confidence reflects demonstrated competence based on the assessment itself.
+
+Both perspectives are intentionally recorded.
+
+Comparing them over time helps identify patterns such as:
+
+- underconfidence despite strong understanding;
+- overconfidence despite knowledge gaps;
+- accurate self-assessment.
+
+Developing well-calibrated confidence is an important engineering skill.
+
+---
+
+## Low
+
+The learner demonstrates only a partial understanding of the module.
+
+Multiple mastery dimensions require further development before the concept can be considered stable.
+
+---
+
+## Medium
+
+The learner demonstrates a solid understanding of the core concepts.
+
+Minor misconceptions or gaps remain, but they do not significantly compromise future progress.
+
+---
+
+## High
+
+The learner demonstrates a deep understanding of the module.
+
+Concepts are explained clearly, connected to previous knowledge, applied to unfamiliar situations, and supported by sound engineering reasoning.
+
+Minor inaccuracies, if present, are limited to terminology or non-fundamental details.
+
+---
+
 # Mastery Assessment
 
-Every module concludes with a structured technical review.
+Every assessment records both:
+
+- **Learner Confidence**, provided before the assessment;
+- **Mentor Confidence**, assigned after the assessment.
+
+These values are intentionally independent.
+
+The objective is not to maximize confidence, but to progressively improve confidence calibration throughout the curriculum.
 
 The mentor assumes the role of a **Senior AI Systems Engineer** conducting an engineering review rather than a traditional examination.
 
