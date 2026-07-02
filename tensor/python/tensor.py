@@ -15,3 +15,9 @@ class Tensor:
 	def __post_init__(self):
 		if self.strides is None:
 			self.strides = compute_contiguous_strides(self.shape)
+
+		if len(self.shape) != len(self.strides):
+			 raise ValueError(
+            	f"Shape rank ({len(self.shape)}) does not match "
+            	f"strides rank ({len(self.strides)})."
+        	)
