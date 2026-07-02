@@ -289,4 +289,112 @@ Shape is fundamental to tensor operations, model architectures, memory allocatio
 
 Module 1.1 — Vectors, Matrices and Tensors
 
---------------------------------------------------------------------------------------------
+---
+
+## Storage
+
+**Definition**
+
+The underlying memory that contains the raw tensor data.
+
+**Purpose**
+
+Provides the physical location where tensor elements are stored independently of how they are interpreted.
+
+**AI Stack Context**
+
+Storage may be shared by multiple tensors exposing different logical views of the same data.
+
+**Related Concepts**
+
+* Tensor
+* Shape
+* Dtype
+* Strides
+
+**Introduced In**
+
+Module 1.2 — Shape, Dtype and Storage
+
+---
+
+## Dtype
+
+**Definition**
+
+Metadata describing how each tensor element is represented and interpreted in memory.
+
+**Purpose**
+
+Determines the size of each element, its numerical representation, and how operations interpret its bytes.
+
+**AI Stack Context**
+
+Choosing an appropriate dtype directly affects memory usage, numerical precision, and computational performance.
+
+**Related Concepts**
+
+* Tensor
+* Storage
+* Shape
+* Strides
+
+**Introduced In**
+
+Module 1.2 — Shape, Dtype and Storage
+
+---
+
+## Strides
+
+**Definition**
+
+Metadata specifying how many elements must be skipped in memory when incrementing an index along each tensor axis.
+
+**Purpose**
+
+Maps logical tensor indices to physical memory locations.
+
+**AI Stack Context**
+
+Strides enable efficient views, transpositions, slicing, and other metadata-only transformations without copying storage.
+
+**Related Concepts**
+
+* Tensor
+* Storage
+* Shape
+* Dtype
+
+**Introduced In**
+
+Module 1.2 — Shape, Dtype and Storage
+
+---
+
+## Contiguous Tensor
+
+**Definition**
+
+A tensor whose elements are laid out in memory according to the default contiguous layout for its shape.
+
+**Purpose**
+
+Represents the standard memory layout from which alternative views can be derived.
+
+**AI Stack Context**
+
+Many tensor operations are most efficient on contiguous tensors, while non-contiguous tensors often arise from views such as transpose or slicing.
+
+**Related Concepts**
+
+* Tensor
+* Storage
+* Shape
+* Strides
+
+**Introduced In**
+
+Module 1.2 — Shape, Dtype and Storage
+
+---

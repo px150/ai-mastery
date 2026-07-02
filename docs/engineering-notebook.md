@@ -255,3 +255,48 @@ This design philosophy is one of the recurring architectural patterns throughout
 * ONNX
 
 --------------------------------------------------------------------------------------------
+
+## A Tensor Is an Interpretation of Storage
+
+**Context**
+
+Module 1.2 — Shape, Dtype and Storage
+
+---
+
+### Observation
+
+A tensor does not own the logical structure of its data.
+
+Instead, it combines a storage with metadata that describes how that storage should be interpreted.
+
+Different tensors may therefore share the same storage while exposing different logical views.
+
+---
+
+### Reasoning
+
+The logical organization of tensor data emerges from the combination of:
+
+* shape;
+* dtype;
+* strides.
+
+Storage itself is simply a contiguous sequence of bytes.
+
+The tensor acts as the mapping between logical indices and physical memory.
+
+---
+
+### Implications
+
+Separating storage from interpretation enables:
+
+* metadata-only operations such as many `reshape()` calls;
+* zero-copy views;
+* tensor transposition through stride manipulation;
+* storage sharing between multiple tensors.
+
+This separation is one of the core architectural principles of modern tensor libraries.
+
+--------------------------------------------------------------------------------------------
