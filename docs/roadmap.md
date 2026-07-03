@@ -176,6 +176,7 @@ Build the mental map of the AI ecosystem and establish the development environme
 
 * 0.1 AI Ecosystem Map
 * 0.2 Repository Setup
+* 0.5 Thinking in Tensors
 
 Repository components:
 
@@ -193,8 +194,9 @@ Understand the fundamental data structure used throughout modern AI systems.
 
 * 1.1 Vectors, Matrices and Tensors
 * 1.2 Shape, Dtype and Storage
-* 1.3 Memory Layout and Strides
-* 1.4 Broadcasting
+* 1.3 Tensor Representation and Indexing
+* 1.4 Views, Reshape and Transpose
+* 1.5 Broadcasting
 
 Repository components:
 
@@ -705,12 +707,13 @@ The Capstone is not a new learning phase, but the integration and validation of 
 
 ---
 
-| Module                            | Status       | Started    | Completed  |
-|-----------------------------------|--------------|------------|------------|
-| 0.1 AI Ecosystem Map              | ✅ Completed | 2026-06-28 | 2026-06-28 |
-| 0.5 Thinking in Tensors           | ✅ Completed | 2026-06-28 | 2026-06-28 |
-| 1.1 Vectors, Matrices and Tensors | ✅ Completed | 2026-06-29 | 2026-06-29 |
-| 1.2 Shape, Dtype and Storage      | ✅ Completed | 2026-07-01 | 2026-07-02 |
+| Module                                 | Status       | Started    | Completed  |
+|----------------------------------------|--------------|------------|------------|
+| 0.1 AI Ecosystem Map                   | ✅ Completed | 2026-06-28 | 2026-06-28 |
+| 0.5 Thinking in Tensors                | ✅ Completed | 2026-06-28 | 2026-06-28 |
+| 1.1 Vectors, Matrices and Tensors      | ✅ Completed | 2026-06-29 | 2026-06-29 |
+| 1.2 Shape, Dtype and Storage           | ✅ Completed | 2026-07-01 | 2026-07-02 |
+| 1.3 Tensor Representation and Indexing | ✅ Completed | 2026-07-02 | 2026-07-03 |
 
 ---
 

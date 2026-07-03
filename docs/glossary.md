@@ -398,3 +398,101 @@ Many tensor operations are most efficient on contiguous tensors, while non-conti
 Module 1.2 — Shape, Dtype and Storage
 
 ---
+
+## Offset
+
+**Definition**
+
+The position of a tensor element within its underlying storage.
+
+**Purpose**
+
+Maps logical tensor coordinates to a physical storage location.
+
+**AI Stack Context**
+
+Offsets are computed from tensor indices and strides during runtime.
+
+**Related Concepts**
+
+* Storage
+* Strides
+* Tensor Indexing
+
+**Introduced In**
+
+Module 1.3 — Tensor Representation and Indexing
+
+---
+
+## Tensor Indexing
+
+**Definition**
+
+The process of accessing tensor elements using logical coordinates.
+
+**Purpose**
+
+Allows runtime systems to retrieve tensor elements independently of their physical memory layout.
+
+**AI Stack Context**
+
+Tensor indexing converts logical indices into storage offsets through stride computation.
+
+**Related Concepts**
+
+* Offset
+* Shape
+* Strides
+
+**Introduced In**
+
+Module 1.3 — Tensor Representation and Indexing
+
+---
+
+## Bounds Checking
+
+**Definition**
+
+Runtime validation ensuring that every tensor index falls within the valid range of its corresponding dimension.
+
+**Purpose**
+
+Prevents invalid memory accesses and guarantees safe tensor indexing.
+
+**Related Concepts**
+
+* Shape
+* Tensor Indexing
+* Invariant
+
+**Introduced In**
+
+Module 1.3 — Tensor Representation and Indexing
+
+---
+
+## Invariant
+
+**Definition**
+
+A property that must always hold for a valid runtime object.
+
+**Purpose**
+
+Defines the conditions required for an object to remain internally consistent throughout its lifetime.
+
+**AI Stack Context**
+
+Tensor invariants simplify runtime implementation by guaranteeing properties such as rank consistency and storage validity after construction.
+
+**Related Concepts**
+
+* Tensor
+* Shape
+* Storage
+
+**Introduced In**
+
+Module 1.3 — Tensor Representation and Indexing

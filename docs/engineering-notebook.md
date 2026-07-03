@@ -300,3 +300,68 @@ Separating storage from interpretation enables:
 This separation is one of the core architectural principles of modern tensor libraries.
 
 --------------------------------------------------------------------------------------------
+
+## Runtime Objects Should Coordinate, Not Compute
+
+**Context**
+
+Module 1.3 — Tensor Representation and Indexing
+
+---
+
+### Observation
+
+Algorithms such as stride computation, tensor size calculation and storage offset computation are independent from the tensor object itself.
+
+The tensor coordinates these algorithms but does not implement them directly.
+
+---
+
+### Reasoning
+
+Keeping algorithms as pure functions:
+
+* improves testability;
+* separates responsibilities;
+* reduces coupling;
+* makes algorithms reusable across future runtime components.
+
+---
+
+### Implications
+
+As the runtime grows, new functionality should be introduced by composing specialized components rather than expanding the tensor object into a monolithic implementation.
+
+This principle should guide future additions such as broadcasting, views, reshaping, and operator dispatch.
+
+---
+
+## Strong Invariants Reduce Runtime Complexity
+
+**Context**
+
+Module 1.3 — Tensor Representation and Indexing
+
+---
+
+### Observation
+
+Constructor validation establishes a valid tensor state before any runtime operation is executed.
+
+---
+
+### Reasoning
+
+Guaranteeing invariants at construction eliminates repeated defensive checks throughout the runtime.
+
+Operations can safely assume that tensors are internally consistent.
+
+---
+
+### Implications
+
+Future tensor operations should rely on established invariants rather than revalidating existing assumptions.
+
+When introducing new metadata, new invariants should be added only when they protect the correctness of the runtime.
+
+--------------------------------------------------------------------------------------------
