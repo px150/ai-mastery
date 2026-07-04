@@ -38,3 +38,16 @@ class Tensor:
 
         offset = compute_offset(indices, self.shape, self.strides)
         return self.storage[offset]
+
+    def transpose(self):
+        if len(self.shape) != 2:
+            raise ValueError("Transpose currently supports only rank-2 tensors.")
+
+        assert self.strides is not None
+
+        return Tensor(
+            storage=self.storage,
+            dtype=self.dtype,
+            shape=(self.shape[1], self.shape[0]),
+            strides=(self.strides[1], self.strides[0]),
+        )
