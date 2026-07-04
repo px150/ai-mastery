@@ -496,3 +496,92 @@ Tensor invariants simplify runtime implementation by guaranteeing properties suc
 **Introduced In**
 
 Module 1.3 — Tensor Representation and Indexing
+
+---
+
+## View
+
+**Definition**
+
+A tensor that shares the same storage as another tensor while exposing different metadata.
+
+**Purpose**
+
+Allows multiple logical representations of the same physical memory without copying data.
+
+**Related Concepts**
+
+* Storage
+* Shape
+* Strides
+* Memory Aliasing
+
+**Introduced In**
+
+Module 1.4 — Views, Reshape and Transpose
+
+---
+
+## Memory Aliasing
+
+**Definition**
+
+The condition in which multiple tensors reference the same storage.
+
+**Purpose**
+
+Explains why modifications performed through one tensor are immediately visible from every other view sharing that storage.
+
+**Related Concepts**
+
+* View
+* Storage
+
+**Introduced In**
+
+Module 1.4 — Views, Reshape and Transpose
+
+---
+
+## Metadata-Only Transformation
+
+**Definition**
+
+A tensor operation implemented exclusively by modifying metadata, without copying the underlying storage.
+
+**Purpose**
+
+Improves runtime efficiency by avoiding unnecessary memory movement.
+
+**Related Concepts**
+
+* View
+* Shape
+* Strides
+* Transpose
+
+**Introduced In**
+
+Module 1.4 — Views, Reshape and Transpose
+
+---
+
+## Contiguous Tensor
+
+**Definition**
+
+A tensor whose logical traversal follows a regular contiguous pattern in storage.
+
+**Purpose**
+
+Determines whether certain operations, such as reshape, can be implemented as metadata-only transformations.
+
+**Related Concepts**
+
+* Storage
+* Strides
+* Reshape
+
+**Introduced In**
+
+Module 1.4 — Views, Reshape and Transpose

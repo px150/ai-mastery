@@ -365,3 +365,58 @@ Future tensor operations should rely on established invariants rather than reval
 When introducing new metadata, new invariants should be added only when they protect the correctness of the runtime.
 
 --------------------------------------------------------------------------------------------
+## Metadata Should Be Preferred Over Memory Copies
+
+**Context**
+
+Module 1.4 — Views, Reshape and Transpose
+
+---
+
+### Observation
+
+Many tensor transformations can be implemented by modifying metadata rather than reallocating storage.
+
+---
+
+### Reasoning
+
+Memory movement is significantly more expensive than metadata updates.
+
+Whenever the desired tensor representation can be expressed through shape and strides, creating a view is preferable to copying data.
+
+---
+
+### Implications
+
+Future runtime features should first determine whether a metadata-only representation is possible before allocating new storage.
+
+---
+
+## Introduce Metadata Only When Required
+
+**Context**
+
+Module 1.4 — Views, Reshape and Transpose
+
+---
+
+### Observation
+
+Although slicing naturally suggests the introduction of a storage offset, the current runtime does not require it.
+
+---
+
+### Reasoning
+
+Adding metadata before it is needed increases implementation complexity without providing immediate value.
+
+The runtime should evolve in response to concrete requirements rather than anticipated ones.
+
+---
+
+### Implications
+
+Additional metadata should be introduced only when an implemented feature cannot be represented using the existing runtime model.
+
+--------------------------------------------------------------------------------------------
