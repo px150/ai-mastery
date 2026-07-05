@@ -39,7 +39,7 @@ class Tensor:
         offset = compute_offset(indices, self.shape, self.strides)
         return self.storage[offset]
 
-    def transpose(self):
+    def transpose(self) -> "Tensor":
         if len(self.shape) != 2:
             raise ValueError("Transpose currently supports only rank-2 tensors.")
 
@@ -51,3 +51,7 @@ class Tensor:
             shape=(self.shape[1], self.shape[0]),
             strides=(self.strides[1], self.strides[0]),
         )
+
+    def is_contiguous(self) -> bool:
+        assert self.strides is not None
+        return self.strides == compute_contiguous_strides(self.shape)
