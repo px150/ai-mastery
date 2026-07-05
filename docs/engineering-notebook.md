@@ -419,4 +419,46 @@ The runtime should evolve in response to concrete requirements rather than antic
 
 Additional metadata should be introduced only when an implemented feature cannot be represented using the existing runtime model.
 
+---
+
+## Contiguity Is a Property of Tensor Layout
+
+**Context**
+
+Module 1.4 — Tensor Contiguity
+
+---
+
+### Observation
+
+Storage is always a contiguous linear block of memory.
+
+Contiguity describes whether a tensor's logical traversal matches the physical order of elements in that storage.
+
+---
+
+### Reasoning
+
+Operations such as transpose modify only tensor metadata.
+
+Although storage remains unchanged, the logical traversal order may no longer follow the contiguous layout defined by the tensor shape.
+
+---
+
+### Implications
+
+A non-contiguous tensor is still mathematically correct.
+
+Contiguity is a performance property that determines whether many runtime operations can efficiently traverse memory without first materializing a new contiguous layout.
+
+---
+
+### Related Concepts
+
+* Storage
+* Strides
+* View
+* Contiguous Tensor
+* Reshape
+
 --------------------------------------------------------------------------------------------

@@ -570,7 +570,7 @@ Module 1.4 — Views, Reshape and Transpose
 
 **Definition**
 
-A tensor whose logical traversal follows a regular contiguous pattern in storage.
+A tensor whose logical traversal follows the physical order of elements in storage.
 
 **Purpose**
 
@@ -581,6 +581,34 @@ Determines whether certain operations, such as reshape, can be implemented as me
 * Storage
 * Strides
 * Reshape
+
+**Introduced In**
+
+Module 1.4 — Views, Reshape and Transpose
+
+---
+
+## Logical Layout
+
+**Definition**
+
+The interpretation of storage defined by a tensor's metadata, including its shape and strides.
+
+**Purpose**
+
+Separates the physical organization of memory from the logical structure exposed by the tensor.
+
+**AI Stack Context**
+
+Multiple tensors may expose different logical layouts while sharing the same storage.
+
+**Related Concepts**
+
+* Tensor
+* Storage
+* Shape
+* Strides
+* View
 
 **Introduced In**
 
