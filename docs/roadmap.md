@@ -75,7 +75,7 @@ Primary language for:
 
 ---
 
-## Rust
+## C++
 
 Primary language for:
 
@@ -85,20 +85,16 @@ Primary language for:
 * production-oriented implementations;
 * performance-sensitive engineering.
 
-Components originally built in Python may later be reimplemented in Rust whenever doing so improves understanding of systems engineering or runtime design.
+Components originally built in Python may later be reimplemented in C++ whenever doing so improves understanding of systems engineering, runtime design, or performance trade-offs.
 
----
-
-## C++
-
-Used primarily for:
+C++ is also used for:
 
 * reading production implementations;
 * understanding architecture;
 * studying optimization techniques;
 * exploring mature AI infrastructure.
 
-The objective is understanding, not rewriting the ecosystem.
+The objective is both implementation and understanding, not rewriting the entire ecosystem.
 
 ---
 

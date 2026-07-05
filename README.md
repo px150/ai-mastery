@@ -59,8 +59,7 @@ Each directory will evolve throughout the journey and represent a concrete build
 Different languages are used for different purposes:
 
 * **Python** — concepts, prototypes, experiments, and model training.
-* **Rust** — runtime components, serving infrastructure, tooling, and systems programming.
-* **C++** — understanding and exploring the implementation of major AI projects.
+* **C++** — runtime components, serving infrastructure, tooling, systems programming, and understanding the implementation of major AI projects.
 
 ## Documentation
 

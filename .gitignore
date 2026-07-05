@@ -30,15 +30,6 @@ htmlcov/
 .ipynb_checkpoints/
 
 # =========================
-# Rust
-# =========================
-target/
-
-# Keep Cargo.lock for binaries.
-# Remove this line if the repository becomes a library.
-#! Cargo.lock
-
-# =========================
 # C/C++
 # =========================
 *.o
@@ -49,10 +40,14 @@ target/
 *.a
 *.lib
 *.exe
+*.out
 cmake-build-*/
 CMakeFiles/
 CMakeCache.txt
 compile_commands.json
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
 
 # =========================
 # IDE
@@ -65,6 +60,7 @@ compile_commands.json
 # =========================
 .DS_Store
 Thumbs.db
+*.dSYM/
 
 # =========================
 # Local environment

@@ -322,7 +322,7 @@ Used for:
 
 Python minimizes friction during exploration.
 
-### Rust
+### C++
 
 Used for:
 
@@ -332,11 +332,9 @@ Used for:
 * performance-oriented reimplementations;
 * production-oriented engineering.
 
-Rust becomes increasingly important as the repository evolves.
+C++ becomes increasingly important as the repository evolves.
 
-### C++
-
-Used primarily for:
+It is also used for:
 
 * reading production implementations;
 * understanding existing AI infrastructure;
