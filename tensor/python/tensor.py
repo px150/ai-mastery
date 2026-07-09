@@ -6,6 +6,7 @@ from .dtype import DType
 from .strides import compute_contiguous_strides
 from .shape import compute_tensor_size
 from .indexing import compute_offset
+from .iteration import iterate_indices
 
 
 @dataclass
@@ -55,3 +56,39 @@ class Tensor:
     def is_contiguous(self) -> bool:
         assert self.strides is not None
         return self.strides == compute_contiguous_strides(self.shape)
+
+    def reshape(self, new_shape: tuple[int, ...]) -> "Tensor":
+        needed_tensor_size = compute_tensor_size(self.shape)
+        new_tensor_size = compute_tensor_size(new_shape)
+
+        if needed_tensor_size != new_tensor_size:
+            raise ValueError(
+                f"Cannot reshape tensor of size {needed_tensor_size} "
+                f"into shape {new_shape} with size {new_tensor_size}."
+            )
+
+        if not self.is_contiguous():
+            return self.contiguous().reshape(new_shape)
+
+        return Tensor(
+            storage=self.storage,
+            dtype=self.dtype,
+            shape=new_shape,
+            strides=compute_contiguous_strides(new_shape),
+        )
+
+    def contiguous(self) -> "Tensor":
+        if self.is_contiguous():
+            return self
+
+        data = []
+
+        for indices in iterate_indices(self.shape):
+            data.append(self[indices])
+
+        return Tensor(
+            storage=Storage(data),
+            dtype=self.dtype,
+            shape=self.shape,
+            strides=compute_contiguous_strides(self.shape),
+        )
