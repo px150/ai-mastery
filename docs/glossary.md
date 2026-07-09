@@ -613,3 +613,39 @@ Multiple tensors may expose different logical layouts while sharing the same sto
 **Introduced In**
 
 Module 1.4 — Views, Reshape and Transpose
+
+--
+
+### Reshape
+
+An operation that changes the logical shape of a tensor while preserving the represented elements.
+
+A reshape is metadata-only when the tensor is contiguous. Otherwise, the runtime must first materialize a contiguous copy.
+
+---
+
+### Contiguous Copy
+
+A newly allocated tensor whose elements are stored according to the canonical contiguous layout.
+
+Contiguous copies are produced when metadata alone cannot represent the desired tensor layout.
+
+---
+
+### Materialization
+
+The process of allocating new storage and copying tensor elements into it.
+
+Materialization is performed only when metadata transformations are insufficient to represent the requested tensor layout.
+
+---
+
+### `contiguous()`
+
+A runtime operation that returns a contiguous representation of a tensor.
+
+If the tensor is already contiguous, the original tensor is returned.
+
+Otherwise, a new tensor with newly allocated storage and canonical contiguous strides is created.
+
+---

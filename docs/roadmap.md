@@ -710,6 +710,7 @@ The Capstone is not a new learning phase, but the integration and validation of 
 | 1.1 Vectors, Matrices and Tensors      | ✅ Completed | 2026-06-29 | 2026-06-29 |
 | 1.2 Shape, Dtype and Storage           | ✅ Completed | 2026-07-01 | 2026-07-02 |
 | 1.3 Tensor Representation and Indexing | ✅ Completed | 2026-07-02 | 2026-07-03 |
+| 1.4 Views, Reshape and Transpose       | ✅ Completed | 2026-07-04 | 2026-07-09 |
 
 ---
 

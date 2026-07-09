@@ -462,3 +462,51 @@ Contiguity is a performance property that determines whether many runtime operat
 * Reshape
 
 --------------------------------------------------------------------------------------------
+
+## Materialization Is a Runtime Decision
+
+**Context**
+
+Module 1.4 — Views, Reshape and Transpose
+
+---
+
+### Observation
+
+A runtime should allocate new storage only when the desired tensor layout cannot be represented through metadata alone.
+
+---
+
+### Reasoning
+
+Metadata transformations preserve both storage and performance by avoiding unnecessary memory movement.
+
+When the requested logical layout cannot be expressed using the existing metadata, the runtime must materialize a new contiguous tensor before continuing execution.
+
+This separates two fundamentally different runtime strategies:
+
+* changing the interpretation of existing memory;
+* creating a new physical memory layout.
+
+---
+
+### Implications
+
+Tensor operations should first determine whether a metadata-only representation is possible.
+
+Materialization should be treated as an implementation strategy rather than as the default behavior.
+
+Future runtime features should explicitly distinguish between metadata transformations and operations that require allocating new storage.
+
+---
+
+### Related Concepts
+
+* View
+* Reshape
+* Contiguous Tensor
+* Materialization
+* Storage
+* Strides
+
+--------------------------------------------------------------------------------------------
